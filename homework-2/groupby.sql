@@ -33,3 +33,6 @@ SELECT country FROM employees INTERSECT
 SELECT country FROM suppliers
 
 -- 7. страны, в которых зарегистрированы и заказчики (customers) и поставщики (suppliers), но не зарегистрированы работники (employees).
+SELECT country FROM customers INTERSECT
+SELECT country FROM suppliers EXCEPT
+SELECT country FROM employees
